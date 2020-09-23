@@ -1,7 +1,10 @@
 require("dotenv").config()
 const express =  require("express")
 const mongoose = require('mongoose')
-const userRoute = require("./routes/user")
+const morgan = require('morgan')
+const bodyParser = require('body-parser')
+const cookieParser = require('cookie-parser')
+const userRoutes = require("./routes/user")
 
 
 const app = express()
@@ -16,7 +19,11 @@ mongoose.connect(process.env.MONGO_URL,{
 .catch(err=>console.log("error connecting TO mONGO DB"))
 
 //middlewares
-app.use('/api',userRoute)
+app.use(morgan('dev'))
+app.use(bodyParser.json())
+
+//routes middlewares
+app.use('/api',userRoutes)
 
 
 const port = process.env.PORT || 3000
