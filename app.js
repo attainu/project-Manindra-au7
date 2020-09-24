@@ -1,5 +1,5 @@
-require("dotenv").config()
 const express =  require("express")
+require("dotenv").config()
 const mongoose = require('mongoose')
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
@@ -21,6 +21,7 @@ mongoose.connect(process.env.MONGO_URL,{
 //middlewares
 app.use(morgan('dev'))
 app.use(bodyParser.json())
+app.use(cookieParser())
 
 //routes middlewares
 app.use('/api',userRoutes)
