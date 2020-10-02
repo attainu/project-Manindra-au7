@@ -1,0 +1,22 @@
+{
+  "name": "flinn",
+  "version": "1.0.0",
+  "description": "Shopping",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attainu/project-Manindra-au7.git"
+  },
+  "author": "Manindra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/attainu/project-Manindra-au7/issues"
+  },
+  "homepage": "https://github.com/attainu/project-Manindra-au7#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
