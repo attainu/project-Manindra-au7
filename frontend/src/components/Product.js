@@ -6,10 +6,10 @@ import Rating from "./Rating";
 const customStyle = {
   backgroundColor: "transparent",
 };
-
+//className='my-3 p-3 rounded'
 const Product = ({ product }) => {
   return (
-    <Card style={customStyle} className='my-3 p-3 rounded'>
+    <Card style={customStyle} >
       <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant='top' />
       </Link>
