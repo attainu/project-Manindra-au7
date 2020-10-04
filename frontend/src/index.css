@@ -1,3 +1,13 @@
+body {
+  margin: 0;
+  background: url("https://image.freepik.com/free-photo/girl-holds-fashion-shopping-bag-beauty_1150-13673.jpg")
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 main {
   min-height: 80vh;
 }
