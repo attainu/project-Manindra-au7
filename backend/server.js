@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
   res.send("api is running..");
 });
 
-//middleware
+//middlewares
 app.use("/api/products", productRoutes);
 app.use("/api/users", userRoutes);
 
