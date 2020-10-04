@@ -31,6 +31,10 @@ const ProductScreen = ({ history, match }) => {
     history.push(`/cart/${match.params.id}?qty=${qty}`);
   };
 
+  const customStyle = {
+    backgroundColor: "transparent",
+  };
+
   return (
     <>
       <Link className='btn btn-light my-3' to='/'>
@@ -41,7 +45,7 @@ const ProductScreen = ({ history, match }) => {
       ) : error ? (
         <Message variant='danger'>{error}</Message>
       ) : (
-        <Row>
+        <Row style={customStyle}>
           <Col md={6}>
             <Image src={product.image} alt={product.name} fluid />
           </Col>
