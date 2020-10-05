@@ -36,7 +36,7 @@ const ProductScreen = ({ history, match }) => {
   };
 
   return (
-    <>
+    <div style={customStyle}>
       <Link className='btn btn-light my-3' to='/'>
         Go Back
       </Link>
@@ -49,19 +49,19 @@ const ProductScreen = ({ history, match }) => {
           <Col md={6}>
             <Image src={product.image} alt={product.name} fluid />
           </Col>
-          <Col md={3} style={customStyle}>
+          <Col md={3}>
             <ListGroup variant='flush'>
-              <ListGroup.Item>
+              <ListGroup.Item style={customStyle}>
                 <h3>{product.name}</h3>
               </ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item style={customStyle}>
                 <Rating
                   value={product.rating}
                   text={`${product.numReviews} reviews`}
                 />
               </ListGroup.Item>
-              <ListGroup.Item>Price: ₹{product.price}</ListGroup.Item>
-              <ListGroup.Item>
+              <ListGroup.Item style={customStyle}>Price: ₹{product.price}</ListGroup.Item>
+              <ListGroup.Item style={customStyle}>
                 Description: {product.description}
               </ListGroup.Item>
             </ListGroup>
@@ -69,29 +69,29 @@ const ProductScreen = ({ history, match }) => {
           <Col md={3}>
             <Card>
               <ListGroup variant='flush'>
-                <ListGroup.Item>
+                <ListGroup.Item style={customStyle}>
                   <Row>
-                    <Col>Price:</Col>
-                    <Col>
-                      <strong>₹{product.price}</strong>
+                    <Col style={customStyle}>Price:</Col>
+                    <Col style={customStyle}>
+                      <strong style={customStyle}>₹{product.price}</strong>
                     </Col>
                   </Row>
                 </ListGroup.Item>
 
-                <ListGroup.Item>
+                <ListGroup.Item style={customStyle}>
                   <Row>
-                    <Col>Status:</Col>
-                    <Col>
+                    <Col style={customStyle}>Status:</Col>
+                    <Col style={customStyle}>
                       {product.countInStock > 0 ? "In Stock" : "Out Of Stock"}
                     </Col>
                   </Row>
                 </ListGroup.Item>
 
                 {product.countInStock > 0 && (
-                  <ListGroup.Item>
+                  <ListGroup.Item style={customStyle}>
                     <Row>
-                      <Col>Qty</Col>
-                      <Col>
+                      <Col style={customStyle}>Qty</Col>
+                      <Col style={customStyle}>
                         <Form.Control
                           as='select'
                           value={qty}
@@ -108,7 +108,7 @@ const ProductScreen = ({ history, match }) => {
                   </ListGroup.Item>
                 )}
 
-                <ListGroup.Item>
+                <ListGroup.Item style={customStyle}>
                   <Button
                     onClick={addToCartHandler}
                     className='btn-block'
@@ -123,7 +123,7 @@ const ProductScreen = ({ history, match }) => {
           </Col>
         </Row>
       )}
-    </>
+    </div>
   );
 };
 
