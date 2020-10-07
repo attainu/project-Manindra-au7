@@ -1,7 +1,7 @@
 {
   "name": "flinn",
   "version": "1.0.0",
-  "description": "Shopping",
+  "description": "",
   "main": "server.js",
   "type": "module",
   "scripts": {
@@ -13,26 +13,18 @@
     "data:destroy": "node backend/seeder -d",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/attainu/project-Manindra-au7.git"
-  },
   "author": "Manindra",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/attainu/project-Manindra-au7/issues"
-  },
-  "homepage": "https://github.com/attainu/project-Manindra-au7#readme",
+  "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-async-handler": "^1.1.4",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.7",
+    "mongoose": "^5.10.6",
     "morgan": "^1.10.0",
-    "multer": "^1.4.2",
-    "path": "^0.12.7"
+    "multer": "^1.4.2"
   },
   "devDependencies": {
     "concurrently": "^5.3.0",
